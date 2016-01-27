@@ -7,6 +7,9 @@ RSpec.describe RomanNumerals do
     1 => "I",
     2 => "II",
     3 => "III",
+    4 => "IV",
+    5 => "V",
+    6 => "VI",
   }.each do |arabic, roman|
     it "converts #{arabic} to #{roman}" do
       expect(romans.convert(arabic)).to eq(roman)
