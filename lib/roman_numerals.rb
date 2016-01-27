@@ -1,23 +1,17 @@
 class RomanNumerals
  
   def convert(from_arabic) 
-    roman = ""
-    if from_arabic == 6
-      roman = "VI"
-      from_arabic -= 6
+    romans = ""
+    symbols = {
+      5 => "V",
+      4 => "IV",
+      1 => "I"
+    }.each do |arabic, roman|
+      while(from_arabic >= arabic)
+        romans += roman
+        from_arabic -= arabic
+      end
     end
-    if from_arabic == 5
-      roman = "V"
-      from_arabic -= 5 
-    end
-    if from_arabic == 4
-      roman = "IV"
-      from_arabic -= 4 
-    end
-    while(from_arabic > 0)
-      roman += "I"
-      from_arabic -= 1
-    end
-    roman
+    romans
   end
 end
