@@ -1,17 +1,19 @@
 class RomanNumerals
  
   def convert(from_arabic) 
+    roman = ""
     if from_arabic == 3
-      return "III"
+      roman = "III"
     end
     if from_arabic == 2
-      return "II"
+      roman = "II"
     end
     if from_arabic == 1
-      return "I"
+      roman = "I"
     end
     if from_arabic == 0
-      return ""
+      roman = ""
     end
+    roman
   end
 end
